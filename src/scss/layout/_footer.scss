@@ -1,0 +1,124 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  background: $k;
+  width: 1440px;
+  height: 520px;
+  &-logo {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: -0.07em;
+    color: $bg-2;
+    margin-bottom: 5px;
+  }
+  &-title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $bianco;
+    text-align: start;
+    margin-bottom: 32px;
+  }
+  &-contacts {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  &-social {
+    font-size: 20px;
+    margin-top: 37px;
+    margin-bottom: 12px;
+  }
+  &-title-main {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+  &-text {
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: $bg-2;
+    width: 246px;
+    text-align: start;
+  }
+  &-list {
+    display: flex;
+    column-gap: 160px;
+    padding-top: 75px;
+  }
+  &-item {
+    &:nth-of-type(2) {
+      position: relative;
+      width: 159px;
+    }
+    &:nth-child(2) {
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 379px;
+        background-color: $orange-3;
+        left: -78px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 379px;
+        background-color: $orange-3;
+        top: 0;
+        left: 237px;
+      }
+    }
+    &-list-menu {
+      margin-top: 33px;
+      &-item {
+        display: flex;
+        &:not(:nth-of-type(4)) {
+          margin-bottom: 48px;
+        }
+        &-link {
+          display: flex;
+          column-gap: 12px;
+          font-family: $font-family;
+          font-weight: 600;
+          font-size: 16px;
+          color: $bg-2;
+        }
+      }
+    }
+    &-list-contacts {
+      display: flex;
+      column-gap: 13px;
+    }
+    &-container-list {
+      display: flex;
+      column-gap: 12px;
+    }
+  }
+  &-info-wrapper {
+    background: $gray;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &-info-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 15px;
+    color: $bg-2;
+  }
+}
