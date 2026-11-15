@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/surf_travel/surf-travel.2f1f4cf1.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Kavoon&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel=stylesheet><body>
+    <header></header>
+
+    <main>
+      <h2 class=destinations-title>Який наступний пункт призначення?</h2>
+      <p class=destinations-undertitle>
+        До якого куточка світу ви хочете поїхати? Шукайте серед понад 200
+        доступних напрямків.
+      </p>
+      <div class=place-style>
+        <aside class=sticky-filter>
+          <form id=filterForm class=filter>
+            <h2 class=filter-title>Пошукові фільтри</h2>
+            <section class=filter-section>
+              <h3 class=filter-title>
+                <button class=filter-button id=filterOpen type=button aria-expanded=false aria-controls=countries-options>
+                  <svg width=28 height=28 class=filter-symbol><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-Earth /></svg>
+                  <span>Напрямок</span>
+                  <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class=filter-arrow viewBox="0 0 8 12"><path fill=#1b160e d="m7.4 6-6 6L0 10.6 4.6 6 0 1.4 1.4 0Z"/></svg>
+                </button>
+              </h3>
+              <div class=filter-content id=countries-options>
+                <div class=filter-overflow>
+                   <div id=countriesFilter class=filter-options>
+                   </div>
+                </div>
+              </div>
+            <section class=filter-section>
+              <h3 class=filter-title>
+                <button class=filter-button id=filterOpen type=button aria-expanded=false aria-controls=categories-options>
+              <svg width=28 height=28 class=filter-symbol><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-bus /></svg>
+                  <span>Тип подорожі</span>
+                  <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class=filter-arrow viewBox="0 0 8 12"><path fill=#1b160e d="m7.4 6-6 6L0 10.6 4.6 6 0 1.4 1.4 0Z"/></svg>
+                </button>
+              </h3>
+              <div class=filter-content id=categories-options>
+                <div class=filter-overflow>
+                   <div id=categoriesFilter class=filter-options>
+                   </div>
+                </div>
+              </div>
+            </section>
+            <section class=filter-range>
+            <label for=difficulty class=filter-title>Складність туризму:</label>
+            <input type=range name=difficulty id=difficulty min=1 max=5 class=filter-input>
+            <label for=priceLevel class=filter-title>Рівень цін:</label>
+            <input type=range name=priceLevel id=priceLevel min=1 max=5 class=filter-input>
+            </section>
+            <button id=filterSubmit class=filter-submit>
+              Підтвердити фільтри
+            </button>
+          
+        </section></form></aside>
+        <div class=destinations-box>
+          <ul id=cardList class=destination></ul>
+          <button type=button id=loadBtn class=load-btn>
+            Загрузити більше
+          </button>
+          <button type=button id=hideBtn class="hidden hide-btn">
+            Сховати
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class=footer>
+    <div class=container>
+    <ul class=footer-list>
+        <li class=footer-item>
+            
+            <a class="footer-logo logo" href=#>Surf &amp; Travel</a>
+            <h3 class="footer-title footer-title-main title">Surf &amp; Travel Agency</h3>
+            <p class="footer-text text">Tutte le destinazioni selezionate per la tua prossima vacanza Surf e non solo.</p>
+        </li>
+        <li class=footer-item>
+            <h3 class="footer-title title">Menu</h3>
+            <ul class=footer-item-list-menu>
+                <li class=footer-item-list-menu-item>
+                    <a class=footer-item-list-menu-item-link href=#>
+                      <svg width=19 height=21><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-surfboard /></svg>Vacanze Surf</a>
+                </li>
+                <li class=footer-item-list-menu-item>
+                    <a class=footer-item-list-menu-item-link href=#>
+                      <svg width=17 height=17><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-Earth /></svg>Destinazioni</a>
+                </li>
+                <li class=footer-item-list-menu-item>
+                    <a class=footer-item-list-menu-item-link href=#>
+                      <svg width=17 height=19><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-house /></svg>Sistemazioni</a>
+                </li>
+                <li class=footer-item-list-menu-item>
+                    <a class=footer-item-list-menu-item-link href=#>
+                      <svg width=16 height=16><use href=/surf_travel/symboldefs.c5b0f01c.svg#icon-mask /></svg>About</a>
+                </li>
+            </ul>
+        </li>
+        <li class=footer-item>
+            <h3 class="footer-contacts footer-title title">Contattaci</h3>
+            <ul class=footer-item-list-contacts>
+                <li class=footer-item-list-contacts-item>
+                  <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=24 height=24><use href=/surf_travel/symboldefs.c5b0f01c.svg#email /></svg>
+                    </a>
+                </li>
+                 <li class=footer-item-list-contacts-item>
+                     <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=24 height=24><use href=/surf_travel/symboldefs.c5b0f01c.svg#phone /></svg>
+                        </a>
+                     
+                </li>
+                 <li class=footer-item-list-contacts-item>
+                     <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=23 height=24><use href=/surf_travel/symboldefs.c5b0f01c.svg#whatsapp /></svg>
+                        </a>
+                </li>
+            </ul>
+            <div class=footer-item-container>
+                <h4 class="footer-social footer-title title">Seguici sui social</h4>
+                <ul class=footer-item-container-list>
+                    <li class=footer-item-container-list-item>
+                         <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=26 height=26><use href=/surf_travel/symboldefs.c5b0f01c.svg#facebook /></svg>
+                        </a>
+                    </li>
+                    <li class=footer-item-container-list-item>
+                         <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=23 height=26><use href=/surf_travel/symboldefs.c5b0f01c.svg#instagram /></svg>
+                        </a>
+                       
+                    </li>
+                    <li class=footer-item-container-list-item>
+                       <a class=footer-item-list-contacts-item-link href=#>
+                    <svg width=26 height=26><use href=/surf_travel/symboldefs.c5b0f01c.svg#youtube /></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    </div>
+    </footer>
+    
+    <div class=footer-info-wrapper>
+     <div class=container>
+    <div class=footer-info-container>
+      <p class="footer-info-text text">Design by Daniele Brusca</p>
+      <p class="footer-info-text text">SURF &amp; TRAVEL AGENCY S.L. ~ NIF. V232423</p>
+    </div>
+  </div>
+</div>
+    <script src=/surf_travel/destinations.7b41222b.js type=module></script>
+  
+
