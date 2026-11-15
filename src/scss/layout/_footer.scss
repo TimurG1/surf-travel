@@ -1,10 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../base/typography" as *;
 .footer {
-  margin-left: auto;
-  margin-right: auto;
   background: $k;
-  width: 1440px;
   height: 520px;
   &-logo {
     font-family: $second-family;
@@ -105,9 +102,6 @@
   }
   &-info-wrapper {
     background: $gray;
-    width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
   }
   &-info-container {
     display: flex;

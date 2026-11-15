@@ -1,18 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kavoon&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <h2 class="destinations-title">Який наступний пункт призначення?</h2>
+      <p class="destinations-undertitle">
+        До якого куточка світу ви хочете поїхати? Шукайте серед понад 200
+        доступних напрямків.
+      </p>
+      <div class="place-style">
+        <aside class="sticky-filter">
+          <form action="" id="filterForm" class="filter">
+            <h2 class="filter-title">Пошукові фільтри</h2>
+            <section class="filter-section">
+              <h3 class="filter-title">
+                <button class="filter-button" id="filterOpen" type="button" aria-expanded="false" aria-controls="countries-options">
+                  <svg class="filter-symbol" width="28px" height="28px">
+                        <use href="./symboldefs.svg#icon-Earth"></use>
+                  </svg>
+                  <span>Напрямок</span>
+                  <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter-arrow">
+                    <path d="M7.4 6L1.4 12L-6.11959e-08 10.6L4.6 6L-4.63341e-07 1.4L1.4 -6.11959e-08L7.4 6Z" fill="#1B160E" />
+                  </svg>
+                </button>
+              </h3>
+              <div class="filter-content" id="countries-options">
+                <div class="filter-overflow">
+                   <div id="countriesFilter" class="filter-options">
+                   </div>
+                </div>
+              </div>
+            <section class="filter-section">
+              <h3 class="filter-title">
+                <button class="filter-button" id="filterOpen" type="button" aria-expanded="false" aria-controls="categories-options">
+              <svg width="28px" height="28px" class="filter-symbol">
+                <use href="./symboldefs.svg#icon-bus"></use>
+              </svg>
+                  <span>Тип подорожі</span>
+                  <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter-arrow">
+                    <path d="M7.4 6L1.4 12L-6.11959e-08 10.6L4.6 6L-4.63341e-07 1.4L1.4 -6.11959e-08L7.4 6Z" fill="#1B160E" />
+                  </svg>
+                </button>
+              </h3>
+              <div class="filter-content" id="categories-options">
+                <div class="filter-overflow">
+                   <div id="categoriesFilter" class="filter-options">
+                   </div>
+                </div>
+              </div>
+            </section>
+            <section class="filter-range">
+            <label for="difficulty" class="filter-title"
+              >Складність туризму:</label
+            >
+            <input
+              type="range"
+              name="difficulty"
+              id="difficulty"
+              min="1"
+              max="5"
+              class="filter-input"
+            />
+            <label for="priceLevel" class="filter-title">Рівень цін:</label>
+            <input
+              type="range"
+              name="priceLevel"
+              id="priceLevel"
+              min="1"
+              max="5"
+              class="filter-input"
+            />
+            </section>
+            <button type="submit" id="filterSubmit" class="filter-submit">
+              Підтвердити фільтри
+            </button>
+          </form>
+        </aside>
+        <div class="destinations-box">
+          <ul id="cardList" class="destination"></ul>
+          <button type="button" id="loadBtn" class="load-btn">
+            Загрузити більше
+          </button>
+          <button type="button" id="hideBtn" class="hide-btn hidden">
+            Сховати
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+    <div class="container">
+    <ul class="footer-list">
+        <li class="footer-item">
+            <!-- <a class="logo footer-logo" href="#"><img src="#" alt="logo"></a> -->
+            <a class="logo footer-logo" href="#">Surf & Travel</a>
+            <h3 class="title footer-title footer-title-main">Surf & Travel Agency</h3>
+            <p class="text footer-text">Tutte le destinazioni selezionate per la tua prossima vacanza Surf e non solo.</p>
+        </li>
+        <li class="footer-item">
+            <h3 class="title footer-title">Menu</h3>
+            <ul class="footer-item-list-menu">
+                <li class="footer-item-list-menu-item">
+                    <a class="footer-item-list-menu-item-link" href="#">
+                      <svg width="19px" height="21px">
+                        <use href="./symboldefs.svg#icon-surfboard"></use>
+                        </svg>Vacanze Surf</a>
+                </li>
+                <li class="footer-item-list-menu-item">
+                    <a class="footer-item-list-menu-item-link" href="#">
+                      <svg width="17px" height="17px">
+                        <use href="./symboldefs.svg#icon-Earth"></use>
+                        </svg>Destinazioni</a>
+                </li>
+                <li class="footer-item-list-menu-item">
+                    <a class="footer-item-list-menu-item-link" href="#">
+                      <svg width="17px" height="19px">
+                        <use href="./symboldefs.svg#icon-house"></use>
+                        </svg>Sistemazioni</a>
+                </li>
+                <li class="footer-item-list-menu-item">
+                    <a class="footer-item-list-menu-item-link" href="#">
+                      <svg width="16px" height="16px">
+                        <use href="./symboldefs.svg#icon-mask"></use>
+                        </svg>About</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-item">
+            <h3 class="title footer-title footer-contacts">Contattaci</h3>
+            <ul class="footer-item-list-contacts">
+                <li class="footer-item-list-contacts-item">
+                  <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="24px" height="24px">
+                        <use href="./symboldefs.svg#email"></use>
+                    </svg>
+                    </a>
+                </li>
+                 <li class="footer-item-list-contacts-item">
+                     <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="24px" height="24px">
+                        <use href="./symboldefs.svg#phone"></use>
+                        </svg>
+                        </a>
+                     
+                </li>
+                 <li class="footer-item-list-contacts-item">
+                     <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="23px" height="24px">
+                        <use href="./symboldefs.svg#whatsapp"></use>
+                        </svg>
+                        </a>
+                </li>
+            </ul>
+            <div class="footer-item-container">
+                <h4 class="title footer-title footer-social">Seguici sui social</h4>
+                <ul class="footer-item-container-list">
+                    <li class="footer-item-container-list-item">
+                         <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="26px" height="26px">
+                        <use href="./symboldefs.svg#facebook"></use>
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item-container-list-item">
+                         <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="23px" height="26px">
+                        <use href="./symboldefs.svg#instagram"></use>
+                        </svg>
+                        </a>
+                       
+                    </li>
+                    <li class="footer-item-container-list-item">
+                       <a class="footer-item-list-contacts-item-link" href="#">
+                    <svg width="26px" height="26px">
+                        <use href="./symboldefs.svg#youtube"></use>
+                        </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    </div>
+    </footer>
     
-</body>
+    <div class="footer-info-wrapper">
+     <div class="container">
+    <div class="footer-info-container">
+      <p class="text footer-info-text">Design by Daniele Brusca</p>
+      <p class="text footer-info-text">SURF & TRAVEL AGENCY S.L. ~ NIF. V232423</p>
+    </div>
+  </div>
+</div>
+    <script src="./destinations.js" type="module"></script>
+  </body>
 </html>

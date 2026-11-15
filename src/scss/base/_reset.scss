@@ -1,11 +1,17 @@
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
 h1, h2, h3, h4, h5, h6, p,
-a, ol, ul, li{
+a, ol, ul, li, button{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	background-color: transparent;
 }
 ol, ul {
 	list-style: none;
