@@ -53,14 +53,6 @@ function renderElements(data, container, template) {
   });
 }
 
-// function renderCards(cards) {
-//   refs.cardList.innerHTML = "";
-//   cards.forEach((card) => {
-//     const markup = destination(card);
-//     refs.cardList.insertAdjacentHTML("beforeend", markup);
-//   });
-// }
-
 async function fetchElement(endpoint, container, template, pagination = false) {
   try {
     const data = await fetchJson(`${API}/` + endpoint);
