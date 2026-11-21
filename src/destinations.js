@@ -3,7 +3,7 @@ import countries from "./templates/countries.hbs";
 import categories from "./templates/categories.hbs";
 
 const API = "https://surf-travel-backend-eta.vercel.app";
-
+let currentUrl = "https://surf-travel-backend-eta.vercel.app/destinations";
 // endpoinst:
 // /countries
 // /categories
@@ -53,16 +53,27 @@ function renderElements(data, container, template) {
   });
 }
 
-async function fetchElement(endpoint, container, template, pagination = false) {
+async function fetchElement(endpoint, container, template) {
   try {
     const data = await fetchJson(`${API}/` + endpoint);
-    if (pagination) {
-      console.log(limit);
-      const slicedData = data.slice(0, limit)
-      renderElements(slicedData, container, template);
-    } else {
+    data.length <= limit
+      ? refs.loadBtn.classList.add("hidden")
+      : refs.loadBtn.classList.remove("hidden");
       renderElements(data, container, template);
-    }
+    
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function fetchCards() {
+  try {
+    const data = await fetchJson(currentUrl);
+    data.length <= limit
+      ? refs.loadBtn.classList.add("hidden")
+      : refs.loadBtn.classList.remove("hidden");
+      const slicedData = data.slice(0, limit)
+      renderElements(slicedData, refs.cardList, destination);
   } catch (error) {
     console.error(error);
   }
@@ -78,13 +89,10 @@ refs.loadBtn.addEventListener("click", (e) => {
     refs.hideBtn.classList.remove("hidden");
     refs.hideBtn.disabled = false;
   }
-  fetchElement(
-    `destinations`,
-    refs.cardList,
-    destination,
-    true
-  );
+  fetchCards();
 });
+
+
 refs.hideBtn.addEventListener("click", (e) => {
   limit -= 15;
   if (limit <= 15) {
@@ -95,27 +103,22 @@ refs.hideBtn.addEventListener("click", (e) => {
     refs.loadBtn.classList.remove("hidden");
     refs.loadBtn.disabled = false;
   }
-  fetchElement(
-    `destinations`,
-    refs.cardList,
-    destination,
-    true
-  );
+  fetchCards();
 });
 
 
-fetchElement(
-  `destinations`,
-  refs.cardList,
-  destination,
-  true,
-);
+fetchCards();
 
 
 fetchElement("countries", refs.countriesFilter, countries);
 
 fetchElement("categories", refs.categoriesFilter, categories);
 
+const loopFormData = (length, arr) => {
+  for (let i = 0; i < length; i++) {
+    arr.push(String(i));
+  }
+};
 
 refs.filterForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -126,18 +129,19 @@ refs.filterForm.addEventListener("submit", async (e) => {
     difficulty: formData.getAll("difficulty"),
     priceLevel: formData.getAll("priceLevel"),
   };
+  
+  const difficultyLength = filters.difficulty[0];
+  const priceLevelLength = filters.priceLevel[0];
+  
+  loopFormData(difficultyLength, filters.difficulty)
+  loopFormData(priceLevelLength, filters.priceLevel);
+  console.log(filters);
   const params = new URLSearchParams();
   Object.entries(filters).forEach(([name, values]) => {
     values.forEach((value) => {
       params.append(name, value);
     });
   });
-  fetchElement(
-    `destinations?${params.toString()}`,
-    refs.cardList,
-    destination,
-    true
-  );
+  currentUrl = API + `/destinations?${params.toString()}`;
+  fetchCards();
 });
-
-
