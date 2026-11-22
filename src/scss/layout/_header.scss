@@ -15,7 +15,7 @@ body {
     font-family: var(--font-family);
 }
 
-
+/* CONTAINER */
 
 .container {
     width: 1440px;
@@ -25,7 +25,7 @@ body {
     align-items: center;
 }
 
-
+/* HEADER */
 
 .header {
     width: 100%;
@@ -94,7 +94,7 @@ body {
     border: none;
 }
 
-
+/* HERO */
 
 .hero {
     position: relative;
@@ -119,6 +119,7 @@ body {
     }
 }
 
+/* SEARCH */
 
 .search-container {
     position: relative;
@@ -166,6 +167,7 @@ body {
     gap: 8px;
 }
 
+/* VACATIONS TITLE */
 
 .section-title {
     font-family: var(--second-family);
@@ -192,11 +194,15 @@ body {
     padding-bottom: 80px;
 }
 
-
+/* VACATIONS */
 
 .vacations {
     width: 100%;
     padding: 70px 0 40px;
+}
+
+.cards-container {
+    width: 100%;
 }
 
 .cards {
@@ -259,12 +265,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
-    line-height: 1;
     margin-bottom: 7px;
 }
-
-
 
 .card-icon {
     width: 78px;
@@ -273,7 +275,7 @@ body {
     fill: black;
 }
 
-
+/* PACKAGES */
 
 .packages {
     display: flex;
@@ -381,6 +383,7 @@ body {
     text-align: center;
 }
 
+/* HOLIDAY */
 
 .images-holiday {
     text-align: center;

@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 @charset "UTF-8";
+=======
+>>>>>>> Stashed changes
 h1, h2, h3, h4, h5, h6, p,
 a, ol, ul, li {
   margin: 0;
@@ -25,6 +28,7 @@ ul {
   list-style: none;
 }
 
+<<<<<<< Updated upstream
 :root {
   --font-family: "Poppins", sans-serif;
   --second-family: "Kavoon", serif;
@@ -37,10 +41,14 @@ body {
 * {
   margin: 0;
   padding: 0;
+=======
+* {
+>>>>>>> Stashed changes
   box-sizing: border-box;
 }
 
 body {
+<<<<<<< Updated upstream
   font-family: Arial, sans-serif;
 }
 
@@ -344,4 +352,92 @@ body {
 .packages .package-card__title {
   font-size: 14px;
   color: #302D27;
+=======
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #263330;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  min-height: 550px;
+  color: white;
+  background-image: linear-gradient(rgba(0, 40, 40, 0.4), rgba(0, 0, 0, 0.3)), url("../../images/surfing.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.navigation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: #ff8038;
+}
+
+.hero {
+  max-width: 800px;
+  margin: 100px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 52px;
+}
+.hero p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ff8038;
+  color: white;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  .hero {
+    margin-top: 70px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+>>>>>>> Stashed changes
 }/*# sourceMappingURL=main.css.map */
