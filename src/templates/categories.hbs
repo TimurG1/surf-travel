@@ -1,1 +1,19 @@
-{{!-- categories --}}
+
+<div class="cards">
+    {{#each cards}}
+    <div class="card">
+        <div class="illustration">
+            <svg class="card-icon">
+                <use href="./symboldefs.svg#icon-{{icon}}"></use>
+            </svg>
+        </div>
+
+        <h2>{{title}}</h2>
+
+        <ul>
+            <li>Da 3 a 10 giorni</li>
+            <li>Aria condizionata</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>

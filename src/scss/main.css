@@ -1,0 +1,347 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6, p,
+a, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  box-shadow: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --second-family: "Kavoon", serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  width: 1440px;
+  padding-top: 39px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 36px;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 119px;
+  background: transparent;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  list-style: none;
+  white-space: nowrap;
+}
+.navigation-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navigation-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.icon__header {
+  width: 19px;
+  height: 20px;
+  color: white;
+}
+
+.icon__search {
+  width: 12px;
+  height: 12px;
+  color: #302D27;
+}
+
+.icon__search-orange {
+  width: 13px;
+  height: 15px;
+  stroke: #FF8F50;
+  fill: white;
+}
+
+.information-header {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--bg-2);
+  padding-right: 261px;
+}
+
+.button-header {
+  background-color: #FF8F50;
+  border-radius: 137px;
+  padding: 9px 21px;
+  width: 106px;
+  height: 47px;
+  border: none;
+}
+
+.header-logo {
+  padding-right: 136px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 715px;
+  background-image: url("../images/girl-surf.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 210px;
+  padding-bottom: 290px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* SEARCH */
+.search-container {
+  position: relative;
+  margin: 0 auto;
+  width: 718px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 24px;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-item,
+.search-itemi-orange {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 173px;
+  height: 39px;
+  padding: 8px 12px;
+  border: 1px solid #6B7D8D;
+  border-radius: 25px;
+}
+.search-item p,
+.search-itemi-orange p {
+  font-size: 9px;
+}
+
+.search-itemi-orange {
+  border-color: #FF8F50;
+}
+
+.search-button {
+  width: 107px;
+  height: 37px;
+  padding: 7px 16px;
+  background-color: #FF8F50;
+  border: none;
+  border-radius: 105px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 25px;
+}
+
+/* VACATIONS TITLE */
+.section-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  color: #302D27;
+}
+
+.title-orange {
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  color: #FF8F50;
+}
+
+.section-description {
+  font-family: var(--third-family);
+  text-align: center;
+  color: #6B7D8D;
+  font-weight: 400;
+  font-size: 19px;
+  padding-top: 31px;
+  padding-bottom: 80px;
+}
+
+/* VACATIONS */
+.vacations {
+  width: 100%;
+  padding: 70px 0 40px;
+}
+
+.cards {
+  width: min(100%, 500px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 11px;
+}
+
+.card {
+  height: 176px;
+  border: 1px solid #e4e4e4;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px 13px;
+  background-color: #ffffff;
+}
+.card h2 {
+  font-family: var(--second-family);
+  color: #ff874d;
+  font-size: 12px;
+  margin: 0 0 9px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #7d8fa2;
+  font-size: 9px;
+}
+.card li {
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+.card li::before {
+  content: "✓";
+  color: #ff874d;
+  font-size: 11px;
+  margin-right: 6px;
+  font-weight: bold;
+}
+.card.selected {
+  border-color: #ff874d;
+  background-color: #fff8f3;
+}
+
+.illustration {
+  height: 78px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+/* MOBILE */
+.card-icon {
+  width: 78px;
+  height: 78px;
+  display: block;
+  fill: black;
+}
+
+.packages .packages-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 355px);
+  grid-template-rows: repeat(2, 345px);
+  justify-content: center;
+  gap: 20px;
+}
+.packages .package-card {
+  width: 355px;
+  height: 345px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.packages .package-card__image {
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+.packages .package-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.packages .package-card__content {
+  padding: 14px 16px;
+}
+.packages .package-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding-left: 15px;
+  border-radius: 39px;
+  padding-top: 3px;
+  background-color: #FF8F50;
+  color: white;
+  font-weight: 600;
+  font-size: 9px;
+  width: 85px;
+  height: 22px;
+}
+.packages .package-card__location {
+  margin-bottom: 7px;
+  color: #FF8F50;
+  font-size: 12px;
+}
+.packages .package-card__title {
+  font-size: 14px;
+  color: #302D27;
+}/*# sourceMappingURL=main.css.map */

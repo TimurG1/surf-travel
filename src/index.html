@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./scss/main.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +13,139 @@
     />
   </head>
   <body>
+    <div class="hero">
+        <header class="header">
+            <div class="container">
+
+                <img src="./images/surf-travel.png" class="header-logo" alt="Surf Travel">
+
+                <ul class="navigation-list">
+                    <li>
+                        <svg class="icon__header">
+                            <use href="./symboldefs.svg#icon-surfboard"></use>
+                        </svg>
+                        <a class="text-header" href="#">Tipi di Vacanze</a>
+                    </li>
+
+                    <li>
+                        <svg class="icon__header">
+                            <use href="./symboldefs.svg#icon-surfboard"></use>
+                        </svg>
+                        <a class="text-header" href="#">Destinazioni</a>
+                    </li>
+
+                    <li>
+                        <svg class="icon__header">
+                            <use href="./symboldefs.svg#icon-house"></use>
+                        </svg>
+                        <a class="text-header" href="#">Sistemazioni</a>
+                    </li>
+
+                    <li>
+                        <a class="information-header" href="#">About</a>
+                    </li>
+                </ul>
+
+                <button class="button-header">Prenota</button>
+
+            </div>
+        </header>
+
+        <main>
+
+            <section class="hero-content">
+                <h1>La tua prossima avventura inizia oggi.</h1>
+            </section>
+
+            <!-- search -->
+            <section class="search-container">
+
+                <div class="search-itemi-orange">
+                    <svg class="icon__search">
+                        <use href="./symboldefs.svg#icon-Earth"></use>
+                    </svg>
+                    <p>Campo Attivo</p>
+                </div>
+
+                <div class="search-item">
+                    <svg class="icon__search-orange">
+                        <use href="./symboldefs.svg#icon-bus"></use>
+                    </svg>
+                    <p>Scelto</p>
+                </div>
+
+                <div class="search-item">
+                    <svg class="icon__search">
+                        <use href="./symboldefs.svg#icon-surfboard"></use>
+                    </svg>
+                    <p>Default</p>
+                </div>
+
+                <button class="search-button">
+                    Cerca
+                    <svg class="icon__search">
+                        <use href="./symboldefs.svg#icon-search"></use>
+                    </svg>
+                </button>
+
+            </section>
+
+            <section class="vacations">
+
+                <h2 class="section-title">
+                    Le vacanze <span class="title-orange">SurfCamp</span>
+                </h2>
+
+                <p class="section-description">
+                    Scegli la tipologia di vacanza di surf che fa per te.
+                    <br>
+                    Puoi partire in qualsiasi momento.
+                </p>
+
+                <div class="cards-container"></div>
+
+            </section>
+
+            <!-- PACKAGES BUTTON -->
+<section class="packages">
+    <h2 class="packages-headline">I pacchetti più popolari</h2>
+    <p class="packages-text">
+        Scegli la tipologia di vacanza di surf che fa per te. Puoi <br>
+        partire in qualsiasi momento.
+    </p>
+    <div class="packages-container"></div>
+
+    <div class="packages__button-wrapper">
+        <button class="packages__button" >
+            Scopri tutti i pacchetti
+        </button>
+    </div>
+</section>
+<section>
+    <h2 class="section-title">Perchè partire con <span class="title-orange">Surfcamp?</span></h2>
+    <p class="packages-text">Da oltre 20 anni aiutiamo viaggiatrici e viaggiatori come te a vivere profonde <br> esperienze di surf e di vita in giro per il mondo. Possiamo garantirti:</p>
+<div class="images-holiday">
+    <div>
+        <img src="./images/round-photo1.png" alt="Surf Travel">
+        <h3 class="main-text-holiday">Attività esclusive </h3>
+        <p class="text-holiday">Non solo surf. Con noi potrai scegliere se <br> fare yoga, immersioni, escursioni e tanto<br> altro. Personalizziamo il tuo viaggio con<br> ciò che ami di più.</p>
+    </div>
+        <div>
+        <img src="./images/round-photo2.png" alt="Surf Travel">
+        <h3 class="main-text-holiday">Le mete di Surfcamp</h3>
+        <p class="text-holiday">Onde per diversi livelli, sicurezza,<br> affidabilità e rispetto per la cultura<br> locale. Ecco cosa puoi aspettarti dalle<br> mete e dalle esperienze di Surf Camp.</p>
+    </div>
+        <div>
+        <img src="./images/round-photo3.png" alt="Surf Travel">
+        <h3 class="main-text-holiday">Adatto a tutti quanti</h3>
+        <p class="text-holiday">Istruttori e surfisti locali ti porteranno tra<br> le onde migliori per te. Sia che tu non<br> abbia mai preso una tavola in mano, sia<br> che tu sia già a un livello avanzato.</p>
+    </div>
+</div>
+</section>
+
+        </main>
+
+    </div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
